@@ -27,5 +27,19 @@ void ShowArray(string[] array)
     Console.WriteLine();
 }
 
+string[] LengthLess(string[] array)
+{
+    int count = 0;
+    for(int i = 0; i < array.Length; i++) // ищем количество элементов в массиве, где длина строки меньше или равна 3-м символам. Делаем это для инициализации нового массива необходимого размера
+        if(array[i].Length <= 3) count++; 
+    
+    string[] resultArray = new string[count];
+    for(int i = 0, j = 0; i < array.Length; i++, j++)
+        if(array[i].Length <= 3) resultArray[j] = array[i];
+        else j--;
+    
+    return resultArray;
+}
+
 
 
