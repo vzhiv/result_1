@@ -41,5 +41,8 @@ string[] LengthLess(string[] array)
     return resultArray;
 }
 
-
+string[] StringArray = CreateStringArray();
+ShowArray(StringArray);
+string[] LessStringArray = LengthLess(StringArray);
+ShowArray(LessStringArray);
 
